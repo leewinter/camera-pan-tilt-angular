@@ -1,0 +1,27 @@
+﻿<h1>Camera</h1>
+<style>
+    .theme-table, .theme {
+        height: 288px;
+        width: 512px;
+    }
+
+    .theme-table {
+        border: 1px solid black;
+        table-layout: fixed;
+    }
+
+    .theme {
+        background: url(http://leewinter.ddns.net:81/cam_pic_new.php?time=1489318563418&pDelay=40000);
+        background-repeat: no-repeat;
+    }
+</style>
+
+<div class="theme">
+    <table class="theme-table">
+        <tbody>
+            <tr *ngFor="let row of rows">
+                <td *ngFor="let col of row.Cols" on-mouseover='mouseOverCell(col)' style="min-width:3px;min-height:5px;"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
